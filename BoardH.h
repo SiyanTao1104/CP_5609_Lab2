@@ -8,6 +8,8 @@
 #include  "PlayerH.h"
 #include  "WallH.h"
 #include  "CookieH.h"
+#include "Bomb.h"
+#include "Monster.h"
 
 typedef  ListBoardObjects* p_ListBoardObjects;
 

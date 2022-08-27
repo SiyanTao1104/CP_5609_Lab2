@@ -1,7 +1,7 @@
 #ifndef H_BOARD_OBJECT
 #define H_BOARD_OBJECT
 enum ObjectColours { BLACK, YELLOW, BLUE, RED, INVISIBLE, BACKGROUND};
-enum ObjectTypes { THE_BACKGROUND, A_COOKIE, A_PLAYER ,A_WALL};
+enum ObjectTypes { THE_BACKGROUND, A_COOKIE, A_PLAYER ,A_WALL, A_MONSTER, A_BOMB};
 
 
 class BoardObject
