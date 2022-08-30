@@ -5,6 +5,8 @@
 #include  "BoardObjectH.h"
 #include  "PlayerH.h"
 #include  "CookieH.h"
+#include "WallH.h"
+#include "Bomb.h"
 
 #ifndef CP_5609_LAB2_VECTORBOARDOBJECTS_H
 #define CP_5609_LAB2_VECTORBOARDOBJECTS_H
@@ -24,6 +26,7 @@ public:
     void removeOnePlayer();
     bool isThereABomb();
     int isCookieValue();
+
 };
 
 
