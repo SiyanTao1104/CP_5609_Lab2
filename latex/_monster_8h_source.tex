@@ -1,0 +1,30 @@
+\hypertarget{_monster_8h_source}{}\doxysection{Monster.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef CP\_5609\_LAB2\_MONSTER\_H}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define CP\_5609\_LAB2\_MONSTER\_H}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}BoardObjectH.h"{}}}
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{class_monster}{Monster}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_board_object}{BoardObject}}}
+\DoxyCodeLine{15 \{}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{private}:}
+\DoxyCodeLine{18     ObjectColours color1;}
+\DoxyCodeLine{19     ObjectColours  color2;}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{public}:}
+\DoxyCodeLine{22     \mbox{\hyperlink{class_monster}{Monster}} (\textcolor{keywordtype}{int} start\_x, \textcolor{keywordtype}{int} start\_y):\mbox{\hyperlink{class_board_object}{BoardObject}}(start\_x,start\_y)}
+\DoxyCodeLine{23     \{}
+\DoxyCodeLine{24         color1 = RED;}
+\DoxyCodeLine{25         color2  = BLUE;}
+\DoxyCodeLine{26         myClass=A\_MONSTER;}
+\DoxyCodeLine{27     \};}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} touch ();}
+\DoxyCodeLine{30 \};}
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//CP\_5609\_LAB2\_MONSTER\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,24 @@
+\hypertarget{_wall_h_8h_source}{}\doxysection{Wall\+H.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{4 \textcolor{keyword}{enum} WallState \{ SOLID\};}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}BoardObjectH.h"{}}}
+\DoxyCodeLine{10 \textcolor{keyword}{class }\mbox{\hyperlink{class_wall}{Wall}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_board_object}{BoardObject}}}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{private}:}
+\DoxyCodeLine{14     ObjectColours color1;}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{public}:}
+\DoxyCodeLine{17     \mbox{\hyperlink{class_wall}{Wall}} (\textcolor{keywordtype}{int} start\_x, \textcolor{keywordtype}{int} start\_y):\mbox{\hyperlink{class_board_object}{BoardObject}}(start\_x,start\_y)}
+\DoxyCodeLine{18         \{ }
+\DoxyCodeLine{19           color1 = BLACK;}
+\DoxyCodeLine{20           myClass=A\_WALL;}
+\DoxyCodeLine{21         \};}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} touch ();}
+\DoxyCodeLine{24 \};}
+
+\end{DoxyCode}

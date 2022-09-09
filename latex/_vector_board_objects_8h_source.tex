@@ -1,0 +1,36 @@
+\hypertarget{_vector_board_objects_8h_source}{}\doxysection{Vector\+Board\+Objects.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include  "{}BoardObjectH.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include  "{}PlayerH.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include  "{}CookieH.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}WallH.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}Bomb.h"{}}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#ifndef CP\_5609\_LAB2\_VECTORBOARDOBJECTS\_H}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define CP\_5609\_LAB2\_VECTORBOARDOBJECTS\_H}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{typedef} \mbox{\hyperlink{class_board_object}{BoardObject}}* \mbox{\hyperlink{class_board_object}{p\_BoardObject}};}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{19 \textcolor{keyword}{class }\mbox{\hyperlink{class_vector_board_objects}{VectorBoardObjects}} \{}
+\DoxyCodeLine{20     std::vector <p\_BoardObject> list;}
+\DoxyCodeLine{21     std::vector < p\_BoardObject>::iterator internalIterator;}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{26 \textcolor{keyword}{public}:}
+\DoxyCodeLine{27     \mbox{\hyperlink{class_vector_board_objects}{VectorBoardObjects}}(\mbox{\hyperlink{class_board_object}{p\_BoardObject}} theFirst);}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     \mbox{\hyperlink{class_board_object}{p\_BoardObject}} theFirst();}
+\DoxyCodeLine{30     \mbox{\hyperlink{class_board_object}{p\_BoardObject}} theNext();}
+\DoxyCodeLine{31     \textcolor{keywordtype}{void} addOne(\mbox{\hyperlink{class_board_object}{p\_BoardObject}} newOne);}
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} removeOnePlayer();}
+\DoxyCodeLine{33     \textcolor{keywordtype}{bool} isThereABomb();}
+\DoxyCodeLine{34     \textcolor{keywordtype}{int} isCookieValue();}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \};}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//CP\_5609\_LAB2\_VECTORBOARDOBJECTS\_H}}
+
+\end{DoxyCode}

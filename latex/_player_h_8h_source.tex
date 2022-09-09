@@ -1,0 +1,32 @@
+\hypertarget{_player_h_8h_source}{}\doxysection{Player\+H.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#ifndef H\_PLAYER}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#define H\_PLAYER}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{enum} PlayerState \{ ALIVE, DEAD\};}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}BoardObjectH.h"{}}}
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{class_player}{Player}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_board_object}{BoardObject}}}
+\DoxyCodeLine{15 \{}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{private}:}
+\DoxyCodeLine{18     PlayerState status;}
+\DoxyCodeLine{19     ObjectColours color1;}
+\DoxyCodeLine{20     ObjectColours  color2;}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{public}:}
+\DoxyCodeLine{23     \mbox{\hyperlink{class_player}{Player}} (\textcolor{keywordtype}{int} start\_x, \textcolor{keywordtype}{int} start\_y):\mbox{\hyperlink{class_board_object}{BoardObject}}(start\_x,start\_y)}
+\DoxyCodeLine{24         \{ status=ALIVE;}
+\DoxyCodeLine{25           color1 = RED;}
+\DoxyCodeLine{26           color2  = BLUE;}
+\DoxyCodeLine{27           myClass=A\_PLAYER;}
+\DoxyCodeLine{28         \};}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} touch ();}
+\DoxyCodeLine{31 \};}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

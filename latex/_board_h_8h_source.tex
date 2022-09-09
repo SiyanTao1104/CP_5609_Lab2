@@ -1,0 +1,86 @@
+\hypertarget{_board_h_8h_source}{}\doxysection{Board\+H.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define ROWS 20}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#define COLUMNS 20}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include  "{}BoardObjectH.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include  "{}ListBoardObjectsH.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include  "{}PlayerH.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include  "{}WallH.h"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include  "{}CookieH.h"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}Bomb.h"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}Monster.h"{}}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{keyword}{typedef}  \mbox{\hyperlink{class_list_board_objects}{ListBoardObjects}}* \mbox{\hyperlink{class_list_board_objects}{p\_ListBoardObjects}};}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{class }\mbox{\hyperlink{class_board}{Board}}}
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{private}:}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     \textcolor{keywordtype}{int} the\_rows, the\_cols;}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{keywordtype}{bool} setOK;}
+\DoxyCodeLine{24     \textcolor{keywordtype}{bool} gameOn;}
+\DoxyCodeLine{25     \textcolor{keywordtype}{int} lives;}
+\DoxyCodeLine{26     \mbox{\hyperlink{class_list_board_objects}{p\_ListBoardObjects}}   mySpace[ROWS][COLUMNS];}
+\DoxyCodeLine{27     \textcolor{keywordtype}{int} player\_id\_x;}
+\DoxyCodeLine{28     \textcolor{keywordtype}{int} player\_id\_y;}
+\DoxyCodeLine{29     \mbox{\hyperlink{class_player}{Player}} *startPlayer;}
+\DoxyCodeLine{30     \textcolor{keywordtype}{int} currentScore;}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{keyword}{public}:}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     \mbox{\hyperlink{class_board}{Board}} (\textcolor{keywordtype}{int} rows, \textcolor{keywordtype}{int} cols)}
+\DoxyCodeLine{36     \{}
+\DoxyCodeLine{37         \textcolor{keywordflow}{if} ((ROWS >= rows ) \&\& (COLUMNS >= cols))}
+\DoxyCodeLine{38         \{ setOK-\/\textcolor{keyword}{true}; the\_rows=rows; the\_cols=cols;}
+\DoxyCodeLine{39             lives=3000000; gameOn=\textcolor{keyword}{true};}
+\DoxyCodeLine{40             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0;  i<rows; i++)}
+\DoxyCodeLine{41                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j=0;  j<cols; j++)}
+\DoxyCodeLine{42                 \{}
+\DoxyCodeLine{43                     \mbox{\hyperlink{class_board_object}{BoardObject}}* aBackground = \textcolor{keyword}{new} \mbox{\hyperlink{class_board_object}{BoardObject}}(i,j);}
+\DoxyCodeLine{44                     \mbox{\hyperlink{class_list_board_objects}{p\_ListBoardObjects}} aList =\textcolor{keyword}{new} \mbox{\hyperlink{class_list_board_objects}{ListBoardObjects}}(aBackground);}
+\DoxyCodeLine{45                     mySpace[i][j]=aList;}
+\DoxyCodeLine{46                 \}}
+\DoxyCodeLine{47             player\_id\_x =the\_rows/2;}
+\DoxyCodeLine{48             player\_id\_y =the\_cols/2;}
+\DoxyCodeLine{49             startPlayer = \textcolor{keyword}{new} \mbox{\hyperlink{class_player}{Player}}(player\_id\_x,player\_id\_y);}
+\DoxyCodeLine{50             currentScore =0;}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52             (mySpace[player\_id\_x][player\_id\_y])-\/>addOne(startPlayer);}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=1; i<the\_rows-\/1; i++)}
+\DoxyCodeLine{55             \{ \mbox{\hyperlink{class_wall}{Wall}} * aWall = \textcolor{keyword}{new} \mbox{\hyperlink{class_wall}{Wall}} (i,1);}
+\DoxyCodeLine{56                 (mySpace[i][1])-\/>addOne(aWall);}
+\DoxyCodeLine{57                 aWall = \textcolor{keyword}{new} \mbox{\hyperlink{class_wall}{Wall}} (i,the\_cols-\/2);}
+\DoxyCodeLine{58                 (mySpace[i][the\_cols-\/2])-\/>addOne(aWall);}
+\DoxyCodeLine{59             \}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=1; i<the\_rows-\/1; i=i+2)}
+\DoxyCodeLine{62             \{ \mbox{\hyperlink{class_cookie}{Cookie}} * aCookie = \textcolor{keyword}{new} \mbox{\hyperlink{class_cookie}{Cookie}} (i,0);}
+\DoxyCodeLine{63                 (mySpace[i][0])-\/>addOne(aCookie);}
+\DoxyCodeLine{64                 aCookie = \textcolor{keyword}{new} \mbox{\hyperlink{class_cookie}{Cookie}} (i,the\_cols-\/1);}
+\DoxyCodeLine{65                 (mySpace[i][the\_cols-\/1])-\/>addOne(aCookie);}
+\DoxyCodeLine{66             \}}
+\DoxyCodeLine{67         \}}
+\DoxyCodeLine{68         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{69             setOK=\textcolor{keyword}{false};}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71     \};}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73     \textcolor{keywordtype}{bool} setBoardOK () \{\textcolor{keywordflow}{return} setOK;\};}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75     \textcolor{keywordtype}{void} paint();}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77     \textcolor{keywordtype}{void} move(\textcolor{keywordtype}{char} command);}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79     \textcolor{keywordtype}{bool} IamAlive() \{\textcolor{keywordflow}{if} (0<lives) \{ lives-\/-\/; \textcolor{keywordflow}{return} \textcolor{keyword}{true};\}}
+\DoxyCodeLine{80         \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} \textcolor{keyword}{false};\}}
+\DoxyCodeLine{81 \};}
+
+\end{DoxyCode}

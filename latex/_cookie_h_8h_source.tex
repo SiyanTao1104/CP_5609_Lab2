@@ -1,0 +1,37 @@
+\hypertarget{_cookie_h_8h_source}{}\doxysection{Cookie\+H.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#ifndef H\_COOKIE}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#define H\_COOKIE}}
+\DoxyCodeLine{6 \textcolor{keyword}{enum} CookieState \{ VISIBLE, EATEN, EXPIRED\};}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{enum} PrizeValueIndex \{CHEAP, MEDIUM, USEFUL, DEAR\};}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}BoardObjectH.h"{}}}
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{class_cookie}{Cookie}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_board_object}{BoardObject}}}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{private}:}
+\DoxyCodeLine{19     CookieState status;}
+\DoxyCodeLine{20     ObjectColours color1;}
+\DoxyCodeLine{21     ObjectColours  color2;}
+\DoxyCodeLine{22     PrizeValueIndex valueIndex;}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{keyword}{public}:}
+\DoxyCodeLine{25     \mbox{\hyperlink{class_cookie}{Cookie}} (\textcolor{keywordtype}{int} start\_x, \textcolor{keywordtype}{int} start\_y):\mbox{\hyperlink{class_board_object}{BoardObject}}(start\_x,start\_y)}
+\DoxyCodeLine{26         \{ status=VISIBLE;}
+\DoxyCodeLine{27           color1 = YELLOW;}
+\DoxyCodeLine{28           color2  = BLUE;}
+\DoxyCodeLine{29           valueIndex=CHEAP;}
+\DoxyCodeLine{30                   myClass=A\_COOKIE;}
+\DoxyCodeLine{31         \};}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{keywordtype}{int} get\_value();}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} touch ();}
+\DoxyCodeLine{36 \};}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

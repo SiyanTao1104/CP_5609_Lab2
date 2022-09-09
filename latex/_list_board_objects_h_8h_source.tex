@@ -1,0 +1,29 @@
+\hypertarget{_list_board_objects_h_8h_source}{}\doxysection{List\+Board\+Objects\+H.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include  "{}BoardObjectH.h"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include  "{}PlayerH.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include  "{}CookieH.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef H\_LIST\_OF\_OBJECTS}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define H\_LIST\_OF\_OBJECTS}}
+\DoxyCodeLine{7 \textcolor{keyword}{typedef} \mbox{\hyperlink{class_board_object}{BoardObject}}* \mbox{\hyperlink{class_board_object}{p\_BoardObject}};}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{class  }\mbox{\hyperlink{class_list_board_objects}{ListBoardObjects}}}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12     std::vector <p\_BoardObject> list;}
+\DoxyCodeLine{13     std::vector < p\_BoardObject>::iterator internalIterator;}
+\DoxyCodeLine{14 \textcolor{keyword}{public}:}
+\DoxyCodeLine{15     \mbox{\hyperlink{class_list_board_objects}{ListBoardObjects}}(\mbox{\hyperlink{class_board_object}{p\_BoardObject}} theFirst);}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     \mbox{\hyperlink{class_board_object}{p\_BoardObject}} theFirst();}
+\DoxyCodeLine{18     \mbox{\hyperlink{class_board_object}{p\_BoardObject}} theNext();}
+\DoxyCodeLine{19     \textcolor{keywordtype}{void} addOne(\mbox{\hyperlink{class_board_object}{p\_BoardObject}} newOne);}
+\DoxyCodeLine{20     \textcolor{keywordtype}{void} removeOnePlayer();}
+\DoxyCodeLine{21     \textcolor{keywordtype}{bool} isThereAWall();}
+\DoxyCodeLine{22     \textcolor{keywordtype}{int} isCookieValue();}
+\DoxyCodeLine{23 \};}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

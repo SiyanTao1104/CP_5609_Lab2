@@ -1,0 +1,53 @@
+\hypertarget{_board_object_h_8h_source}{}\doxysection{Board\+Object\+H.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef H\_BOARD\_OBJECT}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define H\_BOARD\_OBJECT}}
+\DoxyCodeLine{3 \textcolor{keyword}{enum} ObjectColours \{ BLACK, YELLOW, BLUE, RED, INVISIBLE, BACKGROUND\};}
+\DoxyCodeLine{4 \textcolor{keyword}{enum} ObjectTypes \{ THE\_BACKGROUND, A\_COOKIE, A\_PLAYER ,A\_WALL, A\_MONSTER, A\_BOMB\};}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{class }\mbox{\hyperlink{class_board_object}{BoardObject}}}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{private}:}
+\DoxyCodeLine{11     \textcolor{keywordtype}{int} x,y;}
+\DoxyCodeLine{12     ObjectColours currentColor;}
+\DoxyCodeLine{13 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{14     ObjectTypes myClass;}
+\DoxyCodeLine{15     \textcolor{comment}{//int unique\_ID;}}
+\DoxyCodeLine{16     \textcolor{comment}{//static int count;}}
+\DoxyCodeLine{17 \textcolor{keyword}{public}:}
+\DoxyCodeLine{18     \mbox{\hyperlink{class_board_object}{BoardObject}} (\textcolor{keywordtype}{int} start\_x, \textcolor{keywordtype}{int} start\_y)}
+\DoxyCodeLine{19     \{ x=start\_x; y=start\_y;}
+\DoxyCodeLine{20         currentColor=BACKGROUND;}
+\DoxyCodeLine{21         myClass=THE\_BACKGROUND;}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23         \textcolor{comment}{//unique\_ID=count++;}}
+\DoxyCodeLine{24     \};}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26     \textcolor{comment}{//int get\_ID() \{ return unique\_ID;\};}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28     \textcolor{keywordtype}{int} get\_x() \{ \textcolor{keywordflow}{return} x;\};}
+\DoxyCodeLine{29     \textcolor{keywordtype}{int} get\_y() \{ \textcolor{keywordflow}{return} y;\};}
+\DoxyCodeLine{30     ObjectTypes get\_Type() \{\textcolor{keywordflow}{return} myClass;\}}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     ObjectColours get\_Color() \{\textcolor{keywordflow}{return} currentColor; \}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} touch() \{currentColor=BACKGROUND; \}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} set\_color(ObjectColours new\_color)}
+\DoxyCodeLine{40     \{currentColor=new\_color;\};}
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} set\_x(\textcolor{keywordtype}{int} new\_x) \{ x=new\_x;\};}
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} set\_y(\textcolor{keywordtype}{int} new\_y) \{y=new\_y;\};}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \};}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{comment}{//int BoardObject::count=0;}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// H\_BOARD\_OBJECT}}
+
+\end{DoxyCode}
