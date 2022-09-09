@@ -1,12 +1,14 @@
-//
-// Created by TSY on 2022/8/27.
-//
+/**
+ * ... This header file is used for Bomb class ...
+ */
 
 #ifndef CP_5609_LAB2_BOMB_H
 #define CP_5609_LAB2_BOMB_H
 #include "BoardObjectH.h"
 #include <iostream>
-
+/**
+ * ... set bomb color and bomb class ...
+ */
 class Bomb: public BoardObject{
 
 ObjectColours bombColor;

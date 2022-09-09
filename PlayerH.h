@@ -1,3 +1,6 @@
+/**
+ * ... this header file is used for Player class ...
+ */
 #ifndef H_PLAYER
 #define H_PLAYER
 #include <iostream>
@@ -5,7 +8,9 @@
 enum PlayerState { ALIVE, DEAD};
 
 #include "BoardObjectH.h"
-
+/**
+ * ... set player class and parameter ...
+ */
 class Player : public BoardObject
 {
 

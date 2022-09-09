@@ -1,3 +1,6 @@
+/**
+ * ... This header filer is used for Cookie class ...
+ */
 #ifndef H_COOKIE
 #define H_COOKIE
 enum CookieState { VISIBLE, EATEN, EXPIRED};
@@ -6,7 +9,9 @@ enum PrizeValueIndex {CHEAP, MEDIUM, USEFUL, DEAR};
 
 
 #include "BoardObjectH.h"
-
+/**
+ * ... Set cookie class and cookie parameter ...
+ */
 class Cookie : public BoardObject
 {
 

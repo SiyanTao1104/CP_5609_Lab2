@@ -1,8 +1,12 @@
-
+/**
+ * ... this header file is used for Wall class ...
+ */
 enum WallState { SOLID};
 
 #include "BoardObjectH.h"
-
+/**
+ * ... set wall class and parameters ...
+ */
 class Wall : public BoardObject
 {
 

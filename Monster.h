@@ -1,6 +1,6 @@
-//
-// Created by TSY on 2022/8/27.
-//
+/**
+ * ... this header file is used for Monster Class ...
+ */
 
 #ifndef CP_5609_LAB2_MONSTER_H
 #define CP_5609_LAB2_MONSTER_H
@@ -8,6 +8,9 @@
 
 
 #include "BoardObjectH.h"
+/**
+ * ... set monster class and parameter ...
+ */
 class Monster : public BoardObject
 {
 
